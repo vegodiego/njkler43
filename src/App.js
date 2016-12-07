@@ -1,40 +1,21 @@
 import React, { Component } from 'react';
+import posts from './posts'
+
+// Modifica el componente App para implmentar la funcionalidad requerida
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-6 col-sm-offset-3">
-            <form>
-              <div className="form-group">
-                <label htmlFor="first-name">Nombre</label>
-                <input type="text" className="form-control" name="first-name" />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="last-name">Apellido</label>
-                <input type="text" className="form-control" name="last-name" />
-              </div>
-
-              <div className="action">
-                <button type="submit" className="btn btn-primary">Agregar Invitado</button>
-              </div>
-            </form>
-
-            <table className="table bordered-table table-striped">
-              <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Apellido</th>
-                </tr>
-              </thead>
-              <tbody>
-
-              </tbody>
-            </table>
-          </div>
+      <div>
+        <div className="filter">
+          <input type="text" placeholder="Ingresa el término de búsqueda" />
         </div>
+        <ul>
+          <li>
+            <a href={posts[0].url}><img src={posts[0].image } /></a>
+            <p>{ posts[0].title }</p>
+          </li>
+        </ul>
       </div>
     )
   }
