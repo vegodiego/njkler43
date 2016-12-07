@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import posts from './posts'
 
+
 // Modifica el componente App para implmentar la funcionalidad requerida
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
     )
   }
 }
+
 
 export default App
 
