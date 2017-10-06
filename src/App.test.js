@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import App from './App';
+import Setup from './Setup';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -29,4 +30,3 @@ it('it renders 1 posts when the keyword is api', () => {
   wrapper.find('input').first().simulate('change', {target: {value: 'api'}})
   expect(wrapper.find("li").length).toBe(1)
 })
-
